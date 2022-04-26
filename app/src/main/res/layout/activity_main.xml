@@ -40,6 +40,7 @@
 
             <Button
                 android:id="@+id/btnPlusMinus"
+                android:onClick="clickNumber"
                 android:layout_marginRight="5dp"
                 android:layout_weight="1"
                 android:width="80dp"
@@ -50,6 +51,7 @@
 
             <Button
                 android:id="@+id/btnDivide"
+                android:onClick="operation"
                 android:layout_marginRight="5dp"
                 android:layout_weight="1"
                 android:width="80dp"
@@ -60,6 +62,7 @@
 
             <Button
                 android:id="@+id/btnMultiply"
+                android:onClick="operation"
                 android:layout_marginRight="1dp"
                 android:layout_weight="1"
                 android:width="80dp"
@@ -74,6 +77,7 @@
 
             <Button
                 android:id="@+id/btn7"
+                android:onClick="clickNumber"
                 android:layout_marginRight="5dp"
                 android:layout_weight="1"
                 android:width="80dp"
@@ -84,6 +88,7 @@
 
             <Button
                 android:id="@+id/btn8"
+                android:onClick="clickNumber"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="5dp"
@@ -96,6 +101,7 @@
 
             <Button
                 android:id="@+id/btn9"
+                android:onClick="clickNumber"
                 android:layout_marginRight="5dp"
                 android:layout_weight="1"
                 android:width="80dp"
@@ -120,6 +126,7 @@
 
             <Button
                 android:id="@+id/btn4"
+                android:onClick="clickNumber"
                 android:layout_marginRight="5dp"
                 android:layout_weight="1"
                 android:width="80dp"
@@ -130,6 +137,7 @@
 
             <Button
                 android:id="@+id/btn5"
+                android:onClick="clickNumber"
                 android:layout_marginRight="5dp"
                 android:layout_weight="1"
                 android:width="80dp"
@@ -140,6 +148,7 @@
 
             <Button
                 android:id="@+id/btn6"
+                android:onClick="clickNumber"
                 android:layout_marginRight="5dp"
                 android:layout_weight="1"
                 android:width="80dp"
@@ -150,6 +159,7 @@
 
             <Button
                 android:id="@+id/btnPlus"
+                android:onClick="operation"
                 android:layout_marginRight="1dp"
                 android:layout_weight="1"
                 android:width="80dp"
@@ -164,6 +174,7 @@
 
             <Button
                 android:id="@+id/btn1"
+                android:onClick="clickNumber"
                 android:layout_marginRight="5dp"
                 android:layout_weight="1"
                 android:width="80dp"
@@ -174,6 +185,7 @@
 
             <Button
                 android:id="@+id/btn2"
+                android:onClick="clickNumber"
                 android:layout_marginRight="5dp"
                 android:layout_weight="1"
                 android:width="80dp"
@@ -184,6 +196,7 @@
 
             <Button
                 android:id="@+id/btn3"
+                android:onClick="clickNumber"
                 android:layout_marginRight="5dp"
                 android:layout_weight="1"
                 android:width="80dp"
@@ -194,6 +207,7 @@
 
             <Button
                 android:id="@+id/btnMinus"
+                android:onClick="operation"
                 android:layout_marginRight="1dp"
                 android:layout_weight="1"
                 android:width="80dp"
@@ -213,6 +227,7 @@
 
             <Button
                 android:id="@+id/btn0"
+                android:onClick="clickNumber"
                 android:layout_marginRight="5dp"
                 android:layout_weight="3"
                 android:width="80dp"
@@ -223,6 +238,7 @@
 
             <Button
                 android:id="@+id/btnDot"
+                android:onClick="clickNumber"
                 android:layout_marginRight="5dp"
                 android:layout_weight="3"
                 android:width="80dp"
@@ -233,6 +249,7 @@
 
             <Button
                 android:id="@+id/btnEqual"
+                android:onClick="clickEqual"
                 android:layout_marginRight="5dp"
                 android:layout_weight="2"
                 android:width="80dp"
