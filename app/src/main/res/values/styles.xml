@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="MyStyle">
+        <item name="android:textSize">@dimen/numberTextSize</item>
+        <item name="android:layout_marginEnd">@dimen/margin</item>
+        <item name="android:width">@dimen/buttonSize</item>
+        <item name="android:height">@dimen/buttonSize</item>
+    </style>
+
+</resources>

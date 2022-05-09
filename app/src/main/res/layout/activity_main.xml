@@ -1,18 +1,236 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/grey"
+        android:ems="10"
+        android:gravity="right|center"
+        android:inputType="textPersonName"
+        android:text="@string/_0"
+        android:textSize="@dimen/textSize" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/MyStyle">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            >
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnAC"
+                android:onClick="acClick"
+                android:layout_weight="1"
+                android:text="@string/ac"
+                app:cornerRadius="@dimen/cornerRadius"
+                android:backgroundTint="@color/customColor"
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnPlusMinus"
+                android:onClick="clickNumber"
+                android:layout_weight="1"
+                android:text="@string/plusMinus"
+                app:cornerRadius="@dimen/cornerRadius"
+                android:backgroundTint="@color/customColor"
+                 />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnDivide"
+                android:onClick="operation"
+                android:layout_weight="1"
+                android:text="@string/divide"
+                app:cornerRadius="@dimen/cornerRadius"
+                android:backgroundTint="@color/customColor"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnMultiply"
+                android:layout_marginEnd="0dp"
+                android:onClick="operation"
+                android:layout_weight="1"
+                android:text="@string/multiply"
+                app:cornerRadius="@dimen/cornerRadius"
+                android:backgroundTint="@color/customColor"/>
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn7"
+                android:onClick="clickNumber"
+                android:layout_weight="1"
+                android:text="@string/btn7"
+                app:cornerRadius="@dimen/cornerRadius"
+                android:backgroundTint="@color/customColor"
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn8"
+                android:onClick="clickNumber"
+                android:layout_weight="1"
+                android:text="@string/btn8"
+                app:cornerRadius="@dimen/cornerRadius"
+                android:backgroundTint="@color/customColor"
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn9"
+                android:onClick="clickNumber"
+                android:layout_weight="1"
+                android:text="@string/btn9"
+                app:cornerRadius="@dimen/cornerRadius"
+                android:backgroundTint="@color/customColor"
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnPercent"
+                android:onClick="clickPercent"
+                android:layout_marginEnd="0dp"
+                android:layout_weight="1"
+                android:text="@string/percent"
+                app:cornerRadius="@dimen/cornerRadius"
+                android:backgroundTint="@color/customColor"
+                />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn4"
+                android:onClick="clickNumber"
+                android:layout_weight="1"
+                android:text="@string/btn4"
+                app:cornerRadius="@dimen/cornerRadius"
+                android:backgroundTint="@color/customColor"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn5"
+                android:onClick="clickNumber"
+                android:layout_weight="1"
+                android:text="@string/btn5"
+                app:cornerRadius="@dimen/cornerRadius"
+                android:backgroundTint="@color/customColor"
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn6"
+                android:onClick="clickNumber"
+                android:layout_weight="1"
+                android:text="@string/btn6"
+                app:cornerRadius="@dimen/cornerRadius"
+                android:backgroundTint="@color/customColor"
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnPlus"
+                android:onClick="operation"
+                android:layout_marginEnd="0dp"
+                android:layout_weight="1"
+                android:text="@string/plus"
+                app:cornerRadius="@dimen/cornerRadius"
+                android:backgroundTint="@color/customColor"
+
+                />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn1"
+                android:onClick="clickNumber"
+                android:layout_weight="1"
+                android:text="@string/btn1"
+                app:cornerRadius="@dimen/cornerRadius"
+                android:backgroundTint="@color/customColor"
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn2"
+                android:onClick="clickNumber"
+                android:layout_weight="1"
+                android:text="@string/btn2"
+                app:cornerRadius="@dimen/cornerRadius"
+                android:backgroundTint="@color/customColor"
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn3"
+                android:onClick="clickNumber"
+                android:layout_weight="1"
+                android:text="@string/btn3"
+                app:cornerRadius="@dimen/cornerRadius"
+                android:backgroundTint="@color/customColor"
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnMinus"
+                android:onClick="operation"
+                android:layout_marginEnd="0dp"
+                android:layout_weight="1"
+                android:text="@string/minus"
+                app:cornerRadius="@dimen/cornerRadius"
+                android:backgroundTint="@color/customColor"
+                />
+        </TableRow>
+    </TableLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/MyStyle">
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn0"
+                android:onClick="clickNumber"
+                android:layout_weight="3"
+                android:text="@string/btn0"
+                app:cornerRadius="@dimen/cornerRadius"
+                android:backgroundTint="@color/customColor"
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnDot"
+                android:onClick="clickNumber"
+                android:layout_weight="3"
+                android:text="@string/dot"
+                app:cornerRadius="@dimen/cornerRadius"
+                android:backgroundTint="@color/customColor"
+
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnEqual"
+                android:onClick="clickEqual"
+                android:layout_marginEnd="0dp"
+                android:layout_weight="2"
+                android:text="@string/equal"
+                app:cornerRadius="@dimen/cornerRadius"
+                android:backgroundTint="@color/customColor"
+                />
+
+        </TableRow>
+    </LinearLayout>
+
+
+</LinearLayout>
