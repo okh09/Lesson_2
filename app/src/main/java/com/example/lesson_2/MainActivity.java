@@ -8,7 +8,7 @@ import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
     String oldNumber;
-    String operator;
+    String operator = "";
     Boolean isNew = true;
     EditText editText;
 
@@ -37,8 +37,13 @@ public class MainActivity extends AppCompatActivity {
             case R.id.btn8 : number = number + "8"; break;
             case R.id.btn9 : number = number + "9"; break;
             case R.id.btn0 : number = number + "0"; break;
-            case R.id.btnDot : number = number + "."; break;
-            case R.id.btnPlusMinus : number = "-" + number; break;
+            case R.id.btnDot : if (dotIsPresent(number));
+                 else number = number + "."; break;
+            case R.id.btnPlusMinus : if (minusIsPresent(number)) {
+                number = number.substring(1);
+            } else {
+                number = "-" + number;
+            } break;
         }
         editText.setText(number);
     }
@@ -56,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void clickEqual(View view) {
         String newNumber = editText.getText().toString();
-        Double result = 0.0;
+        double result = 0.0;
         switch (operator) {
             case "-" : result = Double.parseDouble(oldNumber) - Double.parseDouble(newNumber); break;
             case "+" : result = Double.parseDouble(oldNumber) + Double.parseDouble(newNumber); break;
@@ -64,5 +69,40 @@ public class MainActivity extends AppCompatActivity {
             case "/" : result = Double.parseDouble(oldNumber) / Double.parseDouble(newNumber); break;
         }
         editText.setText(result + "");
+    }
+
+    public void acClick(View view) {
+        editText.setText("0");
+        isNew = true;
+    }
+
+    public boolean dotIsPresent(String number) {
+        return number.contains(".");
+    }
+
+    public boolean minusIsPresent (String number) {
+        return number.charAt(0) == '-';
+    }
+
+    public void clickPercent(View view) {
+        if(operator.equals("")) {
+            String number = editText.getText().toString();
+            double temp = Double.parseDouble(number) / 100;
+            number = temp + "";
+            editText.setText(number);
+        } else {
+            double result = 0.0;
+            String newNumber = editText.getText().toString();
+            switch (operator) {
+                case "-" : result = Double.parseDouble(oldNumber) - Double.parseDouble(oldNumber) *
+                        Double.parseDouble(newNumber) / 100; break;
+                case "+" : result = Double.parseDouble(oldNumber) + Double.parseDouble(oldNumber) *
+                        Double.parseDouble(newNumber) / 100; break;
+                case "*" : result = Double.parseDouble(oldNumber) * Double.parseDouble(newNumber) / 100; break;
+                case "/" : result = Double.parseDouble(oldNumber) / Double.parseDouble(newNumber) * 100; break;
+            }
+            editText.setText(result + "");
+            operator = "";
+        }
     }
 }
