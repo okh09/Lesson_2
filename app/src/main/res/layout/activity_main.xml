@@ -1,18 +1,201 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    >
 
-    <TextView
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:ems="10"
+        android:gravity="right|center"
+        android:inputType="textPersonName"
+        android:text="@string/_0"
+        android:textSize="@dimen/textSize" />
+
+    <TableLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:theme="@style/MyStyle">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            >
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Widget.Material3.CardView.Outlined"
+                android:id="@+id/btnAC"
+                android:onClick="acClick"
+                android:layout_weight="1"
+                android:text="@string/ac"
+
+                />
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Widget.Material3.CardView.Outlined"
+                android:id="@+id/btnPlusMinus"
+                android:onClick="clickNumber"
+                android:layout_weight="1"
+                android:text="@string/plusMinus"
+                 />
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Widget.Material3.CardView.Outlined"
+                android:id="@+id/btnDivide"
+                android:onClick="operation"
+                android:layout_weight="1"
+                android:text="@string/divide"/>
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Widget.Material3.CardView.Outlined"
+                android:id="@+id/btnMultiply"
+                android:layout_marginEnd="0dp"
+                android:onClick="operation"
+                android:layout_weight="1"
+                android:text="@string/multiply"/>
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Widget.Material3.CardView.Filled"
+                android:id="@+id/btn7"
+                android:onClick="clickNumber"
+                android:layout_weight="1"
+                android:text="@string/btn7"/>
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Widget.Material3.CardView.Filled"
+                android:id="@+id/btn8"
+                android:onClick="clickNumber"
+                android:layout_weight="1"
+                android:text="@string/btn8"/>
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Widget.Material3.CardView.Filled"
+                android:id="@+id/btn9"
+                android:onClick="clickNumber"
+                android:layout_weight="1"
+                android:text="@string/btn9"/>
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Widget.Material3.CardView.Outlined"
+                android:id="@+id/btnPercent"
+                android:onClick="clickPercent"
+                android:layout_marginEnd="0dp"
+                android:layout_weight="1"
+                android:text="@string/percent"/>
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Widget.Material3.CardView.Filled"
+                android:id="@+id/btn4"
+                android:onClick="clickNumber"
+                android:layout_weight="1"
+                android:text="@string/btn4"/>
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Widget.Material3.CardView.Filled"
+                android:id="@+id/btn5"
+                android:onClick="clickNumber"
+                android:layout_weight="1"
+                android:text="@string/btn5"/>
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Widget.Material3.CardView.Filled"
+                android:id="@+id/btn6"
+                android:onClick="clickNumber"
+                android:layout_weight="1"
+                android:text="@string/btn6"/>
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Widget.Material3.CardView.Outlined"
+                android:id="@+id/btnPlus"
+                android:onClick="operation"
+                android:layout_marginEnd="0dp"
+                android:layout_weight="1"
+                android:text="@string/plus"/>
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Widget.Material3.CardView.Filled"
+                android:id="@+id/btn1"
+                android:onClick="clickNumber"
+                android:layout_weight="1"
+                android:text="@string/btn1"/>
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Widget.Material3.CardView.Filled"
+                android:id="@+id/btn2"
+                android:onClick="clickNumber"
+                android:layout_weight="1"
+                android:text="@string/btn2"/>
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Widget.Material3.CardView.Filled"
+                android:id="@+id/btn3"
+                android:onClick="clickNumber"
+                android:layout_weight="1"
+                android:text="@string/btn3"/>
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Widget.Material3.CardView.Outlined"
+                android:id="@+id/btnMinus"
+                android:onClick="operation"
+                android:layout_marginEnd="0dp"
+                android:layout_weight="1"
+                android:text="@string/minus"/>
+        </TableRow>
+    </TableLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/MyStyle">
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Widget.Material3.CardView.Filled"
+                android:id="@+id/btn0"
+                android:onClick="clickNumber"
+                android:layout_weight="3"
+                android:text="@string/btn0"/>
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Widget.Material3.CardView.Filled"
+                android:id="@+id/btnDot"
+                android:onClick="clickNumber"
+                android:layout_weight="3"
+                android:text="@string/dot"/>
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Widget.Material3.CardView.Outlined"
+                android:id="@+id/btnEqual"
+                android:onClick="clickEqual"
+                android:layout_marginEnd="0dp"
+                android:layout_weight="2"
+                android:text="@string/equal"/>
+
+        </TableRow>
+    </LinearLayout>
+
+
+</LinearLayout>

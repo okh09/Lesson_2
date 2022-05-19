@@ -1,3 +1,35 @@
 <resources>
-    <string name="app_name">Lesson_2</string>
+    <string name="app_name">Calc</string>
+    <string name="plusMinus">+|-</string>
+    <string name="divide">/</string>
+    <string name="multiply">*</string>
+    <string name="btn7">7</string>
+    <string name="btn8">8</string>
+    <string name="btn9">9</string>
+    <string name="percent">%</string>
+    <string name="btn4">4</string>
+    <string name="btn5">5</string>
+    <string name="btn6">6</string>
+    <string name="plus">+</string>
+    <string name="btn1">1</string>
+    <string name="btn2">2</string>
+    <string name="btn3">3</string>
+    <string name="minus">-</string>
+    <string name="btn0">0</string>
+    <string name="dot">.</string>
+    <string name="equal">=</string>
+    <string name="ac">AC</string>
+    <string name="_0">0</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="appInfo">О приложении</string>
+    <string name="settings">Настройки</string>
+    <string name="material_light">Светлая тема</string>
+    <string name="material_dark">Тёмная тема</string>
+    <string name="darkMode">Включть тёмную тему</string>
+    <string name="title_activity_settings">Настройки</string>
+    <string name="nightMode">Тёмная тема</string>
+    <string name="enableNightMode">Включить тёмную тему</string>
+
+
 </resources>
