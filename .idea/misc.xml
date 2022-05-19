@@ -3,9 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="../../../../layout/custom_preview.xml" value="0.10341491699218751" />
-        <entry key="app/src/main/res/drawable/rounded_gradient.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.17922363281250006" />
+        <entry key="app/src/main/res/drawable-anydpi/appInfo.xml" value="0.181" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1042728795655824" />
+        <entry key="app/src/main/res/layout/activity_setting.xml" value="0.12569444444444444" />
+        <entry key="app/src/main/res/layout/activity_settings.xml" value="0.16816253662109376" />
+        <entry key="app/src/main/res/layout/fragment_settings.xml" value="0.14921875" />
+        <entry key="app/src/main/res/layout/settings_activity.xml" value="0.179156494140625" />
+        <entry key="app/src/main/res/menu/main.xml" value="0.18659820556640627" />
+        <entry key="app/src/main/res/menu/menu.xml" value="0.14921875" />
+        <entry key="app/src/main/res/xml/prefs.xml" value="0.20554199218750002" />
+        <entry key="app/src/main/res/xml/root_preferences.xml" value="0.2466279771592882" />
       </map>
     </option>
   </component>
@@ -14,12 +21,5 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
-  </component>
-  <component name="VisualizationToolProject">
-    <option name="state">
-      <ProjectState>
-        <option name="scale" value="0.14177703857421875" />
-      </ProjectState>
-    </option>
   </component>
 </project>

@@ -1,23 +1,71 @@
 package com.example.lesson_2;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+    public static final String APP_PREFERENCES = "mySettings";
+    SharedPreferences mSettings;
     String oldNumber;
     String operator = "";
     Boolean isNew = true;
     EditText editText;
+    SaveState saveState;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        saveState = new SaveState(this);
+        if (saveState.getState()) {
+            getDelegate().setLocalNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+        } else {
+            getDelegate().setLocalNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+        }
         setContentView(R.layout.activity_main);
 
+        mSettings = getSharedPreferences(APP_PREFERENCES, Context.MODE_PRIVATE);
+
+        boolean isSwitchChecked = mSettings.getBoolean("isChecked",false);
+
+        if(isSwitchChecked) {
+            saveState.setState(true);
+            getDelegate().setLocalNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+        } else {
+            saveState.setState(false);
+            getDelegate().setLocalNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+        }
+
         editText = findViewById(R.id.editText);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if (item.getItemId() == R.id.info) {
+            Toast.makeText(this, "Версия 1.0.2", Toast.LENGTH_SHORT).show();
+        }
+        if (item.getItemId() == R.id.settings) {
+            Intent runSettings = new Intent(this, SettingsActivity.class);
+            startActivity(runSettings);
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     public void clickNumber(View view) {
